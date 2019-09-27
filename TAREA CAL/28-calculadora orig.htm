@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+
+        <title>Bootstrap Ejemplo</title>
+
+                <link href="css/bootstrap.css" rel="stylesheet">
+
+              <style type="text/css">
+
+                    .container-fluid {background-color: violet;}
+                    .container {background-color:yellow;}
+        
+              </style>
+     
+
+<script type="text/javascript">
+    var num, acc = 0, op = "";
+
+      function mas()   { acc = num.value;  op = "+"; }
+      function menos() { acc = num.value;  op = "-"; }
+      function mul()   { acc = num.value;  op = "*"; }
+      function divi()   { acc = num.value;  op = "/"; }
+      function poten()   { acc = num.value;  op = "x"; }
+
+
+
+      function calcular() 
+      {
+        if (op === "+") {num.value = (+acc + +num.value)}
+        if (op === "-") {num.value = (+acc - +num.value)}
+        if (op === "*") {num.value = (+acc * +num.value)} 
+        if (op === "/") {num.value = (+acc / +num.value)} 
+
+      
+
+        if (op === "x") 
+         {
+
+          num.value=(Math.pow(+acc,+num.value));
+          }        
+      }
+
+        function inic ()   {num = document.getElementById("num");}
+        function vaciar () {num.value = "";}  
+
+
+</script>
+</head>
+
+
+
+<body background="FONDO.png"  onLoad="inic()">
+
+
+              <div class="container-fluid">
+                        <h1 align="center">CALCULADORA  BASICA</h1>
+              </div>
+
+              <div class="container">
+                      <h1 align="center">INGRESA UN DATO  :</h1>
+                      
+              </div>
+            
+
+
+
+  
+  <p align="center">
+  <input type="text" size="13" id="num" onClick="vaciar()">
+  <br>
+  </p>
+
+<div class="container">
+
+  
+  <p>
+  <button style = "color:red;background-color:yellow" type="button" class="btn btn-default" onClick="mas()">  S U M A   +</button> 
+  <button  style = "color:red;background-color:yellow" type="button" class="btn btn-primary" onClick="menos()">  R E  S T A       - </button>
+  <button  style = "color:red;background-color:yellow" type="button"  class="btn btn-primary" onClick="mul()">  MULTIPLICACION    *</button>
+  <button  style = "color:red;background-color:yellow" type="button" class="btn btn-primary" onClick="divi()">  D I V I S I O N      /</button>
+  <button  style = "color:red;background-color:yellow" type="button"  class="btn btn-primary" onClick="poten()">  P O T E N C I A  <sup>x</sup></button>
+
+  <button  style = "color:red;background-color:yellow" type="button" class="btn btn-primary btn-lg" onClick="calcular()" >  RESULTADO  </button>
+  </p>
+  
+
+</div>
+
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+                            <script src="js/jquery-1.11.2.min.js"></script>
+
+                          <!-- Include all compiled plugins (below), or include individual files as needed --> 
+                            <script src="js/bootstrap.js"></script>
+
+
+</body>
+</html>
