@@ -21,19 +21,18 @@
 		{
 
 			var RESP1=document.getElementById("CAMPO1");
-			var boton1=document.getElementById("boton1");
 			
 				if(RESP1.value=="20")
 				{
 					CAMPO1.disabled=true;
-					boton1.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO1.disabled=true;
-					boton1.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -43,19 +42,19 @@
 
 		{
 			var RESP2=document.getElementById("CAMPO2");
-			var boton2=document.getElementById("boton2");
+			
 			
 				if(RESP2.value==3)
 				{
 					CAMPO2.disabled=true;
-					boton2.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO2.disabled=true;
-					boton2.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -65,19 +64,19 @@
 
 		{
 			var RESP3=document.getElementById("CAMPO3");
-			var boton3=document.getElementById("boton3");
+			
 			
 				if(RESP3.value==276)
 				{
 					CAMPO3.disabled=true;
-					boton3.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO3.disabled=true;
-					boton3.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -88,19 +87,19 @@
 
 		{
 			var RESP4=document.getElementById("CAMPO4");
-			var boton4=document.getElementById("boton4");
+			
 			
 				if(RESP4.value==44)
 				{
 					CAMPO4.disabled=true;
-					boton4.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO4.disabled=true;
-					boton4.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -111,19 +110,19 @@
 
 		{
 			var RESP5=document.getElementById("CAMPO5");
-			var boton5=document.getElementById("boton5");
+			
 			
 				if(RESP5.value==8)
 				{
 					CAMPO5.disabled=true;
-					boton5.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO5.disabled=true;
-					boton5.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -134,19 +133,19 @@
 
 		{
 			var RESP6=document.getElementById("CAMPO6");
-			var boton6=document.getElementById("boton6");
+			
 			
 				if(RESP6.value==10)
 				{
 					CAMPO6.disabled=true;
-					boton6.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO6.disabled=true;
-					boton6.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -157,19 +156,18 @@ function PROCESO7()
 
 		{
 			var RESP7=document.getElementById("CAMPO7");
-			var boton7=document.getElementById("boton7");
 			
 				if(RESP7.value==100)
 				{
 					CAMPO7.disabled=true;
-					boton7.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO7.disabled=true;
-					boton7.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -180,19 +178,18 @@ function PROCESO8()
 
 		{
 			var RESP8=document.getElementById("CAMPO8");
-			var boton8=document.getElementById("boton8");
 			
 				if(RESP8.value==100)
 				{
 					CAMPO8.disabled=true;
-					boton8.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO8.disabled=true;
-					boton8.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -203,19 +200,42 @@ function PROCESO8()
 
 		{
 			var RESP9=document.getElementById("CAMPO9");
-			var boton9=document.getElementById("boton9");
+			
 			
 				if(RESP8.value==25)
 				{
 					CAMPO9.disabled=true;
-					boton9.disabled=true;
+					
 					alert('CORRECTA')
 				}
 
 				else
 				{				
 					CAMPO9.disabled=true;
-					boton9.disabled=true;
+					
+					alert('INCORRECTA')
+				}
+
+		}
+
+
+
+		function PROCESO10()
+
+		{
+			var RESP10=document.getElementById("CAMPO10");
+			
+				if(RESP10.value==7)
+				{
+					CAMPO10.disabled=true;
+					
+					alert('CORRECTA')
+				}
+
+				else
+				{				
+					CAMPO10.disabled=true;
+					
 					alert('INCORRECTA')
 				}
 
@@ -267,8 +287,8 @@ function PROCESO8()
 					<th align="left"> 1.-  ¿CUANTO ES LA MULTIMPLICACION DE 2 * 10 ?</th>
 
 						<TD>
-							<input name="PREGUNTA1" type="text" size="10" maxlength="15" id="CAMPO1" value="" onkeyup="PROCESO()"/>
-							<input type="button"  id="boton1" value="EVALUAR"/>
+							<input name="PREGUNTA1" type="number" size="10" maxlength="15" id="CAMPO1" value="" onkeyup="PROCESO()"/>
+							
 						</TD>
 						
 				</tr>
@@ -280,7 +300,7 @@ function PROCESO8()
 							<th align="left">2.-  ¿CUAL ES LA   RAIZ CUADRADA  DE   9?</th>
 								<TD>
 									<input name="PREGUNTA2" type="text" size="10" maxlength="15" id="CAMPO2" value="" onkeyup="PROCESO2()"/>
-									<input type="button"  id="boton2" value="EVALUAR"/>
+									
 								</TD>
 				
 
@@ -294,7 +314,7 @@ function PROCESO8()
 							<th align="left">3.-  ¿ESCRIBE CUANTO ES 9 AL CUBO?</th>
 								<TD>
 									<input name="PREGUNTA3" type="text" size="10" maxlength="15" id="CAMPO3" value="" onkeyup="PROCESO3()"/>
-									<input type="button"  id="boton3" value="EVALUAR"/>
+									
 								</TD>
 				
 
@@ -307,7 +327,7 @@ function PROCESO8()
 							<th align="left">4.-  ¿LA SUMA DE 30 MAS 14 ES ?</th>
 								<TD>
 									<input name="PREGUNTA4" type="text" size="10" maxlength="15" id="CAMPO4" value="" onkeyup="PROCESO4()"/>
-									<input type="button"  id="boton4" value="EVALUAR"/>
+									
 								</TD>
 				
 
@@ -321,7 +341,7 @@ function PROCESO8()
 							<th align="left">5.-  ¿CUAL ES LA RESTA DE 20 - 12 ?</th>
 								<TD>
 									<input name="PREGUNTA5" type="text" size="10" maxlength="15" id="CAMPO5" value="" onkeyup="PROCESO5()"/>
-									<input type="button"  id="boton5" value="EVALUAR"/>
+									
 								</TD>
 				
 
@@ -334,7 +354,7 @@ function PROCESO8()
 							<th align="left">6.-  ¿CUANTO ES 20 ENTRE 2 ?</th>
 								<TD>
 									<input name="PREGUNTA6" type="text" size="10" maxlength="15" id="CAMPO6" value="" onkeyup="PROCESO6()"/>
-									<input type="button"  id="boton6" value="EVALUAR"/>
+									
 								</TD>
 				
 
@@ -346,7 +366,7 @@ function PROCESO8()
 							<th align="left">7.-  ¿ESCRIBE LA MULTIPLICACION DE 10 * 10?</th>
 								<TD>
 									<input name="PREGUNTA7" type="text" size="10" maxlength="15" id="CAMPO7" value="" onkeyup="PROCESO7()"/>
-									<input type="button"  id="boton7" value="EVALUAR"/>
+									
 								</TD>
 				
 
@@ -357,7 +377,7 @@ function PROCESO8()
 							<th align="left">8.-  ¿AL DIVIDIR 100 ENTRE 4 DA UN RESULTADO DE?</th>
 								<TD>
 									<input name="PREGUNTA8" type="text" size="10" maxlength="15" id="CAMPO8" value="" onkeyup="PROCESO8()"/>
-									<input type="button"  id="boton8" value="EVALUAR"/>
+									
 								</TD>
 				
 
@@ -369,11 +389,29 @@ function PROCESO8()
 							<th align="left">9.-  ¿CALCULAR 2 AL CUBO DA UN RESULTADO DE?</th>
 								<TD>
 									<input name="PREGUNTA9" type="text" size="10" maxlength="15" id="CAMPO9" value="" onkeyup="PROCESO9()"/>
-									<input type="button"  id="boton9" value="EVALUAR"/>
+									
 								</TD>
 				
 
 				</tr>
+
+
+				<tr>
+							<th align="left">10.-  ¿CUANTO ES LA RAIZ CUADRADA DE 49?</th>
+								<TD>
+									<input name="PREGUNTA10" type="text" size="10" maxlength="15" id="CAMPO10" value="" onkeyup="PROCESO10()"/>
+									
+								</TD>
+				
+
+				</tr>
+
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+
+
 
 
 			</TABLE>
