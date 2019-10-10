@@ -1,7 +1,59 @@
 #CABECERA
 {
- background: #16A085;
+ background:yellow;
  border: 5px solid #999999;
  padding: 10px;
  text-align: center;
+}
+
+#minutos
+{
+ 
+ background: white;
+ border: 5px solid #999999;
+ padding: 10px;
+ text-align: center;
+ font-size: 40px;
+}
+
+
+
+#segundos
+{
+ background: white;
+ border: 5px solid #999999;
+ padding: 10px;
+ text-align: center;
+font-size: 40px;
+}
+
+.redondeado {
+   border-radius: 5px;
+    background-color: #def;
+    border: 0;
+ }
+
+
+ #PREGUNTA
+ {
+
+ 	font-family: Arial; font-size: 20pt; background-color: #00FF00;
+ }
+
+.TEXTO
+{
+	size: 20;
+}
+
+#seccion {
+ float: left;
+ width: 660px;
+ margin: 20px;
+ }
+
+ article {
+ background: #FFFBCC;
+ border: 10px solid #999999;
+ padding: 20px;
+ margin-bottom: 15px;
 }

@@ -15,6 +15,56 @@
 	<script type="js/jquery.min.js"></script>
 
 	<script type="text/javascript">
+
+		var crono;
+		var b;
+		var m;
+
+		function detener()
+		{
+			clearInterval(crono);
+
+		}
+
+
+
+		function carga()
+
+		{
+			con_s=0;
+			con_m=0;
+			s=document.getElementById("segundos");
+			m=document.getElementById("minutos");
+
+			 crono=setInterval(
+			
+				function()
+				{
+					if(con_s==60)
+					{
+						con_s=0;
+						con_m++;
+
+						m.innerHTML=con_m;
+
+							if(con_m==0)
+							{
+								con_m=0;
+							}
+					}
+
+					s.innerHTML=con_s;
+					con_s++;
+				}
+
+			,1000);
+
+		}
+
+
+
+		
+		
 		
 		function PROCESO()
 
@@ -26,14 +76,16 @@
 				{
 					CAMPO1.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO1.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+				
 				}
 
 		}
@@ -48,14 +100,16 @@
 				{
 					CAMPO2.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO2.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+					
 				}
 
 		}
@@ -66,18 +120,20 @@
 			var RESP3=document.getElementById("CAMPO3");
 			
 			
-				if(RESP3.value==276)
+				if(RESP3.value==25)
 				{
 					CAMPO3.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO3.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+					
 				}
 
 		}
@@ -93,14 +149,16 @@
 				{
 					CAMPO4.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO4.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+					
 				}
 
 		}
@@ -116,14 +174,16 @@
 				{
 					CAMPO5.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO5.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+				
 				}
 
 		}
@@ -139,14 +199,16 @@
 				{
 					CAMPO6.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO6.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+					
 				}
 
 		}
@@ -161,14 +223,16 @@ function PROCESO7()
 				{
 					CAMPO7.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO7.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+				
 				}
 
 		}
@@ -179,18 +243,20 @@ function PROCESO8()
 		{
 			var RESP8=document.getElementById("CAMPO8");
 			
-				if(RESP8.value==100)
+				if(RESP8.value==25)
 				{
 					CAMPO8.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO8.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+				
 				}
 
 		}
@@ -202,18 +268,20 @@ function PROCESO8()
 			var RESP9=document.getElementById("CAMPO9");
 			
 			
-				if(RESP8.value==25)
+				if(RESP9.value==8)
 				{
 					CAMPO9.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					
 				}
 
 				else
 				{				
 					CAMPO9.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+				
 				}
 
 		}
@@ -229,43 +297,52 @@ function PROCESO8()
 				{
 					CAMPO10.disabled=true;
 					
-					alert('CORRECTA')
+					alert('CORRECTA');
+					b=b+1;
 				}
 
 				else
 				{				
 					CAMPO10.disabled=true;
 					
-					alert('INCORRECTA')
+					alert('INCORRECTA');
+					m=m+1;
 				}
+
+			
+
+			detener();
+
+			alert('PREGUNTAS CORRECTAS' + b);
+			alert('PREGUNTAS INCORRECTAS'+ m);
+
 
 		}
 
+		
 
-
-
-
-
-
-
-
-
-
-
+	
 
 
 	</script>
 
 
 </head>
-<body  background="FONDO.jpg">
+<body  background="FONDO.jpg" onload="carga()">
 
 					<script >
-						alert(" EN ESTA PÁGINA SE REALIZA UN EXAMEN DE 10 PREGUNTAS DE LA MATERIA DE MATEMATICAS, LAS PREGUNTAS SERAN ABIERTAS  Y SE TE CONFIRMARA SI ES CORRECTA O NO, TRATA DE SER BREVE Y AL FINAL SERAS EVALUADO ")
+						alert("EN ESTA PÁGINA SE REALIZA UN EXAMEN DE 10 PREGUNTAS DE LA MATERIA DE MATEMATICAS, UTILIZA LAS FLECHITAS PARA PONER EL RESULTADO Y LUEGO ENTER, SE TE CONFIRMARA SI ES CORRECTA O NO,SE TE TOMARA EL TIEMPO  Y AL FINAL SERAS EVALUADO ")
 					</script>
 
+		    
+
+
 		<header id="CABECERA">
-				<h1> PREGUNTAS DE MATEMATICAS</h1>
+				<font color="black"><h1> PREGUNTAS DE MATEMATICAS</h1></font>
+				
+				<p>
+					<span id="minutos">0</span>:<span id="segundos">0</span>
+				</p>
 		</header>
 				<div align="center">
 					<figure >
@@ -284,22 +361,50 @@ function PROCESO8()
 				<tr>
 					
 
-					<th align="left"> 1.-  ¿CUANTO ES LA MULTIMPLICACION DE 2 * 10 ?</th>
-
+					<th align="left"> <font color="white"><h2>1.-¿CUANTO ES LA MULTIMPLICACION DE 2 * 10 ?</h2></font></th>
+					
 						<TD>
-							<input name="PREGUNTA1" type="number" size="10" maxlength="15" id="CAMPO1" value="" onkeyup="PROCESO()"/>
+							<input name="PREGUNTA" style="width:200px;height:30px;text-align:center" class="redondeado" type="number"  id="CAMPO1" value="" onkeyup="PROCESO()"/>
 							
 						</TD>
 						
 				</tr>
 
-				<tr></tr>
+			
 				
 				
 				<tr>
-							<th align="left">2.-  ¿CUAL ES LA   RAIZ CUADRADA  DE   9?</th>
+							<th align="left"> <font color="white"><h2>2.-¿CUAL ES LA RAIZ CUADRADA DE 9?</h2></font></th>
+							
+							 <TD>
+								<input name="PREGUNTA2" style="width:200px;height:30px;text-align:center" class="redondeado"type="number"  id="CAMPO2" value="" onkeyup="PROCESO2()"/>
+									
+							</TD>
+				
+
+				</tr>
+
+				<tr></tr>
+			
+
+
+				<tr>
+							<th align="left"> <font color="white"><h2>3.-¿ESCRIBE CUANTO ES 5 AL CUADRADO?</h2></font></th>
 								<TD>
-									<input name="PREGUNTA2" type="text" size="10" maxlength="15" id="CAMPO2" value="" onkeyup="PROCESO2()"/>
+									<input name="PREGUNTA3" style="width:200px;height:30px;text-align:center" class="redondeado" type="number" id="CAMPO3" value="" onkeyup="PROCESO3()"/>
+									
+								</TD>
+				
+
+				</tr>
+
+				<tr></tr>
+				
+
+				<tr>
+							<th align="left"> <font color="white"><h2>4.-¿LA SUMA DE 30 MAS 14 ES ?</h2></font></th>
+								<TD>
+									<input name="PREGUNTA4" style="width:200px;height:30px;text-align:center" class="redondeado" type="number"  id="CAMPO4" value="" onkeyup="PROCESO4()"/>
 									
 								</TD>
 				
@@ -311,36 +416,9 @@ function PROCESO8()
 
 
 				<tr>
-							<th align="left">3.-  ¿ESCRIBE CUANTO ES 9 AL CUBO?</th>
+							<th align="left"> <font color="white"><h2>5.-¿CUAL ES LA RESTA DE 20 MENOS 12 ?</h2></font></th>
 								<TD>
-									<input name="PREGUNTA3" type="text" size="10" maxlength="15" id="CAMPO3" value="" onkeyup="PROCESO3()"/>
-									
-								</TD>
-				
-
-				</tr>
-
-				<tr></tr>
-				
-
-				<tr>
-							<th align="left">4.-  ¿LA SUMA DE 30 MAS 14 ES ?</th>
-								<TD>
-									<input name="PREGUNTA4" type="text" size="10" maxlength="15" id="CAMPO4" value="" onkeyup="PROCESO4()"/>
-									
-								</TD>
-				
-
-				</tr>
-
-				<tr></tr>
-			
-
-
-				<tr>
-							<th align="left">5.-  ¿CUAL ES LA RESTA DE 20 - 12 ?</th>
-								<TD>
-									<input name="PREGUNTA5" type="text" size="10" maxlength="15" id="CAMPO5" value="" onkeyup="PROCESO5()"/>
+									<input name="PREGUNTA5" style="width:200px;height:30px;text-align:center" class="redondeado" type="number"  id="CAMPO5" value="" onkeyup="PROCESO5()"/>
 									
 								</TD>
 				
@@ -351,9 +429,9 @@ function PROCESO8()
 
 
 				<tr>
-							<th align="left">6.-  ¿CUANTO ES 20 ENTRE 2 ?</th>
+							<th align="left"> <font color="white"><h2>6.-¿CUANTO ES 20 ENTRE  2 ?</h2></font></th>
 								<TD>
-									<input name="PREGUNTA6" type="text" size="10" maxlength="15" id="CAMPO6" value="" onkeyup="PROCESO6()"/>
+									<input name="PREGUNTA6" style="width:200px;height:30px;text-align:center" class="redondeado" type="number"  id="CAMPO6" value="" onkeyup="PROCESO6()"/>
 									
 								</TD>
 				
@@ -363,9 +441,9 @@ function PROCESO8()
 				<tr></tr>
 
 				<tr>
-							<th align="left">7.-  ¿ESCRIBE LA MULTIPLICACION DE 10 * 10?</th>
+							<th align="left"> <font color="white"><h2>7.-¿ESCRIBE CUANTO ES LA MULTIPLICACION DE 10 * 10 ?</h2></font></th>
 								<TD>
-									<input name="PREGUNTA7" type="text" size="10" maxlength="15" id="CAMPO7" value="" onkeyup="PROCESO7()"/>
+									<input name="PREGUNTA7"  style="width:200px;height:30px;text-align:center" class="redondeado" type="number" id="CAMPO7" value="" onkeyup="PROCESO7()"/>
 									
 								</TD>
 				
@@ -374,9 +452,9 @@ function PROCESO8()
 				<tr></tr>
 
 				<tr>
-							<th align="left">8.-  ¿AL DIVIDIR 100 ENTRE 4 DA UN RESULTADO DE?</th>
+							<th align="left"> <font color="white"><h2>8.-¿DIVIDIR 100 ENTRE 4 ES ?</h2></font></th>
 								<TD>
-									<input name="PREGUNTA8" type="text" size="10" maxlength="15" id="CAMPO8" value="" onkeyup="PROCESO8()"/>
+									<input name="PREGUNTA8" style="width:200px;height:30px;text-align:center" class="redondeado" type="number"  id="CAMPO8" value="" onkeyup="PROCESO8()"/>
 									
 								</TD>
 				
@@ -386,9 +464,9 @@ function PROCESO8()
 				<tr></tr>
 
 				<tr>
-							<th align="left">9.-  ¿CALCULAR 2 AL CUBO DA UN RESULTADO DE?</th>
+							<th align="left"> <font color="white"><h2>9.-CUANTO ES 2 AL CUBO ?</h2></font></th>
 								<TD>
-									<input name="PREGUNTA9" type="text" size="10" maxlength="15" id="CAMPO9" value="" onkeyup="PROCESO9()"/>
+									<input name="PREGUNTA9" style="width:200px;height:30px;text-align:center" class="redondeado" type="number" id="CAMPO9" value="" onkeyup="PROCESO9()"/>
 									
 								</TD>
 				
@@ -397,27 +475,33 @@ function PROCESO8()
 
 
 				<tr>
-							<th align="left">10.-  ¿CUANTO ES LA RAIZ CUADRADA DE 49?</th>
+							<th align="left"> <font color="white"><h2>10.- CUANTO ES LA RAIZ CUADRADA DE 49 ?</h2></font></th>
 								<TD>
-									<input name="PREGUNTA10" type="text" size="10" maxlength="15" id="CAMPO10" value="" onkeyup="PROCESO10()"/>
+									<input name="PREGUNTA10" style="width:200px;height:30px;text-align:center" class="redondeado" type="number"  id="CAMPO10" value="" onkeyup="PROCESO10()"/>
 									
 								</TD>
-				
-
+								
 				</tr>
 
 				<tr></tr>
 				<tr></tr>
 				<tr></tr>
 				<tr></tr>
-
-
-
 
 			</TABLE>
+
+			
+			<br>
+			<br>
+
+		
+
+
 </div>
 	
-	
+	<div id="content"></div>
+
+
 </body>
 
 
